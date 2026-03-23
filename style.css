@@ -1,0 +1,181 @@
+body{
+    background: #ff0015;
+    background: linear-gradient(180deg, rgba(255, 0, 21, 0.86) 0%, rgba(0, 0, 0, 1) 70%);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+
+#container{
+    background: rgba(18, 18, 18, 0.4);
+    backdrop-filter: blur(9px);
+
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px 3px #03CE9B;
+    width: 80%;
+    max-width: 558px;
+    margin: 20% auto;  
+    
+}
+
+
+
+/*----------------------------------------*/
+
+header{
+    margin-left: 5%;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0);
+    
+}
+
+
+/*Configuração do display*/
+#display{
+    width: 95%;
+    height: 5vh;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+    border: none;
+    caret-color: transparent;
+    
+}
+#display[readonly] {
+    outline: none;
+    cursor: default;
+}
+/*----------------------------------------*/
+
+/*  Configurar as teclas e suas posições    */
+.teclas{
+    display: grid;
+    /*criar 4 colunas de tamanhos igual*/
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    grid-template-areas: 
+    "ac parenteses porcentagem divisão"
+    "n7 n8 n9 multiplicação"
+    "n4 n5 n6 menos"
+    "n1 n2 n3 adição"
+    "n0 virgula apagar igual";
+
+    width:90%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+
+    align-items: center;
+    justify-items: center;
+}
+/* numéricos   */
+.bnt-1 {grid-area: n1;}
+.bnt-2 {grid-area: n2;}
+.bnt-3 {grid-area: n3;}
+.bnt-4 {grid-area: n4;}
+.bnt-5 {grid-area: n5;}
+.bnt-6 {grid-area: n6;}
+.bnt-7 {grid-area: n7;}
+.bnt-8 {grid-area: n8;}
+.bnt-9 {grid-area: n9;}
+.bnt-0 {grid-area: n0;}
+/* operadoes */
+.bnt-adição {grid-area: adição;}
+.bnt-menos {grid-area: menos;}
+.bnt-igual {grid-area: igual;}
+.bnt-vezes {grid-area: multiplicação;}
+.bnt-porcentagem {grid-area: porcentagem;}
+.bnt-divisão {grid-area: divisão;}
+/* outros */
+.bnt-virgula {grid-area: virgula;}
+.bnt-ac {grid-area: ac;}
+.bnt-apagar {grid-area: apagar;}
+.bnt-parenteses {grid-area: parenteses;}
+
+/*----------------------------------------*/
+
+.bnt{
+    border-radius: 15px;
+    border: transparent;
+    height: 50px;
+    box-sizing: border-box;
+
+    font-size: 1.9rem;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Configuração dos botões estilo 1*/
+.bnt-estilo1{
+    width: 90%;
+    background: #9E9E9E;
+}
+.bnt-estilo1:hover{
+    background: #DBDBDB;
+    transition: 0.2s;
+}
+.bnt-estilo1:active{
+    background: #525252;
+    transform: scale(0.7);
+    transition: 0.1s ease;
+}
+
+
+
+/*Configuração dos botões operadores*/
+.bnt-estilo2{
+    width: 110%;
+    color: #B9C0FE;
+    background: #020E75;
+}
+.bnt-estilo2:hover{
+    background: #5C95FF;
+    transition: 0.2s;
+}
+.bnt-estilo2:active{
+    background: #010846;
+    transform: scale(0.8);
+    transition: 0.1s ease;
+}
+/*----------------------------------------*/
+
+/*Configuração do botão igual*/
+.bnt-igual{
+    background: #001EFF;
+    color: #B9C0FE;
+}
+.bnt-igual:hover{
+    background: #8A97FF;
+    transition: 0.2s;
+}
+.bnt-igual:active{
+    background: #000319;
+    transition:0.1;
+}
+/*----------------------------------------*/
+
+/*ajusta medidas diferentes para pc*/
+@media (min-width: 768px){
+    #container{
+        width: 30%;
+        margin-top: 10%;
+    }
+
+    #display{
+        height: 6vh;
+    }
+    .bnt{
+        height: 60px;
+    }
+}
