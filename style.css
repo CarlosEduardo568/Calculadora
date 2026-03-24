@@ -1,6 +1,5 @@
 body{
-    background: #ff0015;
-    background: linear-gradient(180deg, rgba(255, 0, 21, 0.86) 0%, rgba(0, 0, 0, 1) 70%);
+    background: black;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,8 +29,8 @@ body{
 
 header{
     margin-left: 5%;
-    font-family: sans-serif;
-    color: rgba(0, 0, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgba(59, 0, 209);
     
 }
 
